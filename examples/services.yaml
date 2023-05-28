@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleetman-webapp
+spec:
+  selector: #defines which pods are going to be represented by this service
+    app: webapp # load balancing traffic across Pods matching this label
+    release: "0-5"
+  ports:
+    - name: http
+      port: 80      # Accept traffic on port 80
+      nodePort: 30080 # forward traffic to 30080
+  type: NodePort
+
+# Loadbalncer: Can't be used locally. Can be used with some Cloud provider
+
+# ClusterIp: Can only be accessble inside the cluster (cluster) not externally accessible by web browser
+# NodePort: Expose a port throught the node ( we can choose what port we are going to exposed to the outside world)
+
+# For nodePort: we can't expose 80. Any port greater than 30,000
