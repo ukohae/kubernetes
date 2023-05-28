@@ -1,7 +1,7 @@
 # kubernetes
-[Kubernetes Note](https://github.com/devops-terraform-aws/kubernetes){:target="_blank" rel="noopener"}
+[Kubernetes Note](https://github.com/devops-terraform-aws/kubernetes)
 
-[Kubernetes Documentation Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.27/#deployment-v1-apps){:target="_blank" rel="noopener"}
+[Kubernetes Documentation Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.27/#deployment-v1-apps)
 
 ### Kubernetes commands
 ```
