@@ -1,8 +1,4 @@
-# ReplicaSet: Extra piece of configurations that we give to kubernetes
-# How many instances of this pod do we want kubernetes to make sure 
-# are  runniung at any one time
-
-apiVersion: apps/v1  #tag version based on api ( can be in development)
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: webapp
@@ -22,6 +18,10 @@ spec:
           ports:
             - containerPort: 80
 
+
+# ReplicaSet: Extra piece of configurations that we give to kubernetes
+# How many instances of this pod do we want kubernetes to make sure 
+# are  runniung at any one time
 
 # CURRENT: is the number of containers that are running
 # READY: is the number of container that are responding to requests

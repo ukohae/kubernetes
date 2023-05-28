@@ -1,15 +1,20 @@
 # kubernetes
-[Kubernetes Note](https://github.com/devops-terraform-aws/kubernetes)
+[Kubernetes Note](https://github.com/devops-terraform-aws/kubernetes){:target="_blank" rel="noopener"}
+
+[Kubernetes Documentation Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.27/#deployment-v1-apps){:target="_blank" rel="noopener"}
 
 ### Kubernetes commands
 ```
 kubectl apply -f fileName.yaml
 kubectl get all
 kubectl delete po --all   # delete all pod
+kubectl rollout status deploy webapp  # check status of deployment
+kubectl rollout undo deploy webapp --to-revision=2  # rollback to specific version
+kubectl rollout history deploy webapp  # check version history
 ```
 
 ## Troubleshooting
-### ImagePullBack Error
+### ImagePullBackOff Error
 1.  `Image not found`: The specified image name or tag does not exist in the registry or repository. It could be due to a typo in the image name, incorrect image version, or the image being removed from the registry.
 
 2.  `Authentication issues`: If the container image requires authentication or the registry requires credentials to access the image, incorrect or missing authentication credentials can cause a pullback error. This can be resolved by providing the correct credentials or configuring the Kubernetes cluster with the necessary authentication details.
