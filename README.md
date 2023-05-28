@@ -8,9 +8,13 @@
 kubectl apply -f fileName.yaml
 kubectl get all
 kubectl delete po --all   # delete all pod
-kubectl rollout status deploy webapp  # check status of deployment
-kubectl rollout undo deploy webapp --to-revision=2  # rollback to specific version
-kubectl rollout history deploy webapp  # check version history
+kubectl rollout status deploy webapp   # check status of deployment
+kubectl rollout undo deploy webapp --to-revision=2   # rollback to specific version
+kubectl rollout history deploy webapp   # check version history
+kubectl get all -n kube-system      # list all in kube-system
+kubectl get po -n nameSpace  # get pods in specific nameSpace
+kubectl describe svc kube-dns -n kube-system  #  decribe the service kube-dns in nameSpace `kube-system`
+kubectl exec -it podName -- sh   # enter a pod
 ```
 
 ## Troubleshooting
