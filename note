@@ -1,0 +1,10 @@
+Networking and Service Discovery
+- Pods
+
+Microservices: Building system of self contained components
+One service is responsible for one & only business requirement
+
+
+
+Monolith: Just a war file
+  - It gets too big to manage

@@ -15,6 +15,8 @@ kubectl get all -n kube-system      # list all in kube-system
 kubectl get po -n nameSpace  # get pods in specific nameSpace
 kubectl describe svc kube-dns -n kube-system  #  decribe the service kube-dns in nameSpace `kube-system`
 kubectl exec -it podName -- sh   # enter a pod
+kubectl logs podName  # only on pods
+kubectl logs -f podName # this will follow the logs
 ```
 
 ## Troubleshooting
